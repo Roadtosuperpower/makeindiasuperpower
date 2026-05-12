@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="A comprehensive people's manifesto for transforming India — 9 pillars of bold reform.">
+<title>Make India Super Power — People's Reform Manifesto</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --sf: #FF9933;
+  --sf2: #e07a18;
+  --gr: #138808;
+  --gr2: #0b5c05;
+  --nv: #0c2d4e;
+  --nv2: #112240;
+  --nv3: #091829;
+  --wh: #ffffff;
+  --bg: #f8f7f4;
+  --tx: #1a1a1e;
+  --tm: #3c3c42;
+  --mu: #6b6b72;
+  --bd: #e3e2db;
+  --blight: #eeede8;
+  --rd: #b91c1c;
+  --rl: #fef2f2;
+  --gl: #f0faf0;
+  --al: #fffbeb;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;color:var(--tx);background:var(--bg);line-height:1.78;overflow-x:hidden}
+
+/* ── PROGRESS BAR ── */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--sf),var(--gr));z-index:9999;transition:width .08s linear}
+
+/* ── TOPBAR ── */
+.topbar{background:var(--nv3);padding:8px 20px;text-align:center;font-size:11.5px;color:#607b92;letter-spacing:.6px}
+.topbar strong{color:var(--sf)}
+
+/* ── NAV ── */
+nav{background:var(--nv2);padding:0 28px;position:sticky;top:0;z-index:500;box-shadow:0 2px 24px rgba(0,0,0,.45)}
+.nav-wrap{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 0;gap:8px;flex-wrap:wrap}
+.nav-logo{font-family:'Playfair Display',serif;font-size:17px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.nav-logo em{color:var(--sf);font-style:normal}
+.nav-links{display:flex;gap:2px;flex-wrap:wrap}
+.nav-links a{color:#8aacca;font-size:11.5px;font-weight:600;text-decoration:none;padding:6px 10px;border-radius:6px;transition:.16s;letter-spacing:.2px}
+.nav-links a:hover{background:rgba(255,255,255,.07);color:#fff}
+.nav-links .ncta{background:var(--sf);color:#3d1800!important;border-radius:18px!important;font-weight:700!important;padding:7px 15px!important}
+.nav-links .ncta:hover{background:var(--sf2)!important}
+.tc{height:4px;background:linear-gradient(90deg,#FF9933 33.3%,#fff 33.3%,#fff 66.6%,#138808 66.6%)}
+
+/* ── HERO ── */
+.hero{background:var(--nv3);padding:84px 24px 96px;text-align:center;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 900px 500px at 50% -10%,rgba(12,45,78,.9),transparent 68%),
+  radial-gradient(ellipse 600px 400px at 15% 110%,rgba(255,153,51,.09),transparent 60%),
+  radial-gradient(ellipse 600px 400px at 85% 110%,rgba(19,136,8,.09),transparent 60%);
+  pointer-events:none}
+.hero-flag{font-size:64px;display:block;margin-bottom:20px;animation:bob 3.2s ease-in-out infinite;position:relative}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(0deg)}40%{transform:translateY(-10px) rotate(1deg)}60%{transform:translateY(-8px) rotate(-1deg)}}
+.hero-badge{display:inline-block;background:rgba(255,153,51,.13);border:1px solid rgba(255,153,51,.35);color:var(--sf);font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;padding:5px 20px;border-radius:20px;margin-bottom:22px;position:relative}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(30px,5.5vw,58px);font-weight:900;color:#fff;line-height:1.13;max-width:820px;margin:0 auto 20px;position:relative}
+.hero h1 .a1{color:var(--sf)}.hero h1 .a2{color:#5ce696}
+.hero-sub{font-size:16px;color:#7a9db8;max-width:600px;margin:0 auto 34px;position:relative;font-weight:400}
+.hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.btn-p{background:var(--sf);color:#3d1800;padding:14px 36px;border-radius:9px;font-size:15px;font-weight:700;text-decoration:none;border:none;cursor:pointer;font-family:inherit;box-shadow:0 4px 24px rgba(255,153,51,.38);transition:.2s}
+.btn-p:hover{background:var(--sf2);transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,153,51,.44)}
+.btn-s{background:transparent;color:#c8dff0;border:1.5px solid rgba(255,255,255,.28);padding:13px 32px;border-radius:9px;font-size:15px;cursor:pointer;text-decoration:none;font-family:inherit;transition:.2s}
+.btn-s:hover{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.5)}
+.hero-stats{display:flex;justify-content:center;gap:48px;margin-top:60px;flex-wrap:wrap;position:relative}
+.hstat .n{font-family:'Playfair Display',serif;font-size:32px;font-weight:700;color:var(--sf)}
+.hstat .l{font-size:11px;color:#607b92;margin-top:3px;letter-spacing:.5px;text-transform:uppercase}
+
+/* ── OVERVIEW ── */
+.overview{background:var(--wh);padding:68px 24px;border-bottom:1px solid var(--bd)}
+.ov-inner{max-width:1100px;margin:0 auto}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-eye{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--sf);margin-bottom:10px}
+.sec-head h2{font-family:'Playfair Display',serif;font-size:34px;font-weight:700;color:var(--nv)}
+.sec-head p{color:var(--mu);margin-top:8px;font-size:15px}
+.pillars{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:14px}
+.pcard{background:var(--bg);border:1.5px solid var(--bd);border-radius:14px;padding:22px 14px 20px;text-align:center;text-decoration:none;display:block;transition:.22s;position:relative;overflow:hidden}
+.pcard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--sf),var(--gr));transform:scaleX(0);transform-origin:left;transition:.22s}
+.pcard:hover{border-color:var(--sf);transform:translateY(-3px);box-shadow:0 6px 20px rgba(0,0,0,.09)}
+.pcard:hover::after{transform:scaleX(1)}
+.pnum{display:inline-block;background:var(--nv);color:rgba(255,255,255,.7);font-size:9px;font-weight:700;letter-spacing:1.2px;padding:3px 9px;border-radius:20px;margin-bottom:12px}
+.pcard .ic{font-size:28px;margin-bottom:10px;display:block}
+.pcard h3{font-size:13px;font-weight:700;color:var(--nv);margin-bottom:4px}
+.pcard p{font-size:11px;color:var(--mu);line-height:1.5}
+
+/* ── REFORM SECTION ── */
+.rsec{padding:72px 24px;border-bottom:1px solid var(--bd)}
+.rsec:nth-child(odd){background:var(--bg)}.rsec:nth-child(even){background:var(--wh)}
+.ri{max-width:900px;margin:0 auto}
+.rnum{display:inline-block;background:var(--nv);color:rgba(255,255,255,.55);font-size:9.5px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 14px;border-radius:20px;margin-bottom:13px}
+.rtitle{font-family:'Playfair Display',serif;font-size:27px;font-weight:700;color:var(--nv);border-left:5px solid var(--sf);padding-left:16px;margin-bottom:8px;line-height:1.28}
+.rsub{font-size:14px;color:var(--mu);padding-left:21px;font-style:italic;margin-bottom:30px}
+.cbox{background:var(--rl);border-left:4px solid var(--rd);border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:26px;font-size:14px;color:#7c1d1d;line-height:1.75}
+.cbox strong{display:block;font-weight:700;color:var(--rd);margin-bottom:5px;font-size:14px}
+.pbox{background:var(--gl);border-left:4px solid var(--gr);border-radius:0 10px 10px 0;padding:14px 20px;margin-bottom:26px;font-size:14px;color:#1a4a1a;font-weight:600;line-height:1.7}
+.dm{background:var(--wh);border:1.5px solid var(--blight);border-radius:12px;padding:19px 22px;margin-bottom:11px;transition:border-color .18s,box-shadow .18s}
+.dm:hover{border-color:var(--bd);box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.dm h4{font-size:14px;font-weight:700;color:var(--nv);margin-bottom:8px;display:flex;align-items:flex-start;gap:9px;flex-wrap:wrap;line-height:1.4}
+.dm p{font-size:13.5px;color:var(--tm);line-height:1.82}
+/* Tags */
+.tg{display:inline-block;font-size:9.5px;font-weight:700;padding:2px 10px;border-radius:20px;white-space:nowrap;letter-spacing:.3px}
+.tr{background:#fee2e2;color:#991b1b}.tg2{background:#dcfce7;color:#166534}.tb{background:#dbeafe;color:#1e40af}
+.ta{background:#fef3c7;color:#92400e}.tp{background:#ede9fe;color:#5b21b6}.tt{background:#ccfbf1;color:#134e4a}
+.tn{background:#e0e7ff;color:#1e3a8a}.to{background:#ffedd5;color:#9a3412}
+
+/* ── EDIT PANEL ── */
+.ep{background:#fffcf0;border:1.5px dashed #d97706;border-radius:12px;padding:20px 22px;margin-top:28px}
+.ep-hd{display:flex;align-items:center;gap:8px;margin-bottom:13px}
+.ep-hd h4{font-size:13px;font-weight:700;color:#92400e}
+.ep textarea{width:100%;padding:12px 14px;font-size:13.5px;font-family:'DM Sans',sans-serif;border:1.5px solid #d97706;border-radius:8px;background:#fff;color:var(--tx);resize:vertical;min-height:88px;transition:border-color .18s,box-shadow .18s}
+.ep textarea:focus{outline:none;border-color:var(--sf);box-shadow:0 0 0 3px rgba(255,153,51,.14)}
+.ep-btns{display:flex;gap:9px;margin-top:11px;align-items:center;flex-wrap:wrap}
+.bsave{background:var(--gr);color:#fff;border:none;padding:9px 20px;border-radius:7px;font-size:13px;font-weight:700;cursor:pointer;font-family:inherit;transition:background .16s}
+.bsave:hover{background:var(--gr2)}
+.bclr{background:transparent;color:var(--rd);border:1.5px solid var(--rd);padding:8px 16px;border-radius:7px;font-size:13px;cursor:pointer;font-family:inherit;transition:.16s}
+.bclr:hover{background:var(--rl)}
+.sbadge{display:none;font-size:12px;color:var(--gr);font-weight:700}
+.saved-item{background:#fff;border-left:3px solid var(--gr);border-radius:0 8px 8px 0;padding:11px 14px;margin-top:9px;font-size:13px;color:var(--tm);animation:slidein .3s ease}
+@keyframes slidein{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+.saved-meta{font-size:10px;color:var(--mu);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:3px}
+.shr-row{display:flex;align-items:center;gap:10px;margin-top:20px;flex-wrap:wrap}
+.shr-row span{font-size:11px;color:var(--mu);font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.shrbtn{background:var(--bg);border:1.5px solid var(--bd);color:var(--tm);padding:6px 15px;border-radius:20px;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;transition:.16s}
+.shrbtn:hover{border-color:var(--sf);color:var(--sf)}
+
+/* ── SUBMIT ── */
+.sub-sec{background:var(--nv2);padding:76px 24px;position:relative;overflow:hidden}
+.sub-sec::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 700px 500px at 50% 50%,rgba(255,153,51,.05),transparent 70%);pointer-events:none}
+.sub-inner{max-width:640px;margin:0 auto;text-align:center;position:relative}
+.sub-inner h2{font-family:'Playfair Display',serif;font-size:30px;font-weight:700;color:#fff;margin-bottom:10px}
+.sub-inner>p{color:#7a9db8;margin-bottom:32px;font-size:15px}
+.sub-form{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:30px;text-align:left}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{margin-bottom:15px}
+.fg label{font-size:10.5px;font-weight:700;color:#8aacca;display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.fg input,.fg select,.fg textarea{width:100%;padding:11px 14px;font-size:14px;font-family:'DM Sans',sans-serif;border:1.5px solid rgba(255,255,255,.12);border-radius:8px;background:rgba(255,255,255,.07);color:#fff;transition:.18s}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.28)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--sf);box-shadow:0 0 0 3px rgba(255,153,51,.15)}
+.fg select option{background:var(--nv3);color:#fff}
+.fg textarea{height:96px;resize:vertical}
+.bsub{width:100%;padding:14px;background:linear-gradient(135deg,var(--sf),#ff7800);color:#3d1800;border:none;border-radius:10px;font-size:15px;font-weight:700;font-family:'DM Sans',sans-serif;cursor:pointer;transition:.22s;box-shadow:0 4px 24px rgba(255,153,51,.3)}
+.bsub:hover{transform:translateY(-2px);box-shadow:0 8px 32px rgba(255,153,51,.42)}
+#sub-list{margin-top:22px}
+.sub-card{background:rgba(255,255,255,.06);border-left:3px solid var(--sf);border-radius:0 10px 10px 0;padding:14px 18px;margin-bottom:10px;font-size:13px;color:#b8cfe0;animation:slidein .3s ease}
+.sub-card strong{color:var(--sf)}.sub-card em{color:#8aacca}
+
+/* ── FOOTER ── */
+footer{background:var(--nv3);color:#3d5a70;padding:52px 24px 32px}
+.ft-inner{max-width:1100px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:24px}
+.ft-brand .ftl{font-family:'Playfair Display',serif;font-size:19px;color:#fff;margin-bottom:10px}
+.ft-brand .ftl em{color:var(--sf);font-style:normal}
+.ft-brand p{font-size:13px;line-height:1.78;max-width:300px}
+.ft-col h4{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:#6a94b4;margin-bottom:15px}
+.ft-col a{display:block;font-size:13px;color:#3d5a70;text-decoration:none;margin-bottom:8px;transition:.15s}
+.ft-col a:hover{color:#b0c8db}
+.ft-col a.hl{color:var(--sf);font-weight:600}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;font-size:12px}
+.ft-mottos{display:flex;gap:20px;flex-wrap:wrap;font-style:italic;color:#233d52}
+
+/* ── BACK TO TOP ── */
+#btt{position:fixed;bottom:28px;right:28px;width:46px;height:46px;background:var(--nv);color:#fff;border:none;border-radius:50%;font-size:18px;cursor:pointer;box-shadow:0 4px 18px rgba(0,0,0,.35);opacity:0;transform:translateY(14px);transition:.25s;z-index:400;display:flex;align-items:center;justify-content:center}
+#btt.show{opacity:1;transform:none}
+#btt:hover{background:var(--sf);color:#3d1800}
+
+/* ── FADE IN ── */
+.fi{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.fi.on{opacity:1;transform:none}
+
+/* ── RESPONSIVE ── */
+@media(max-width:760px){
+  .nav-links{display:none}
+  .hero h1{font-size:28px}
+  .ft-grid{grid-template-columns:1fr;gap:22px}
+  .frow{grid-template-columns:1fr}
+  .hero-stats{gap:24px}
+  .rtitle{font-size:21px}
+}
+@media print{
+  #prog,nav,.topbar,.ep,.sub-sec,#btt,.shr-row,footer{display:none!important}
+  .rsec{page-break-inside:avoid;padding:28px 0}
+}
+</style>
+</head>
+<body>
+
+<div id="prog"></div>
+
+<div class="topbar">🇮🇳 &nbsp;<strong>Make India Super Power</strong> — A People's Reform Manifesto &nbsp;·&nbsp; Satyameva Jayate &nbsp;·&nbsp; जय हिन्द &nbsp;·&nbsp; Vande Mataram</div>
+
+<nav>
+  <div class="nav-wrap">
+    <a class="nav-logo" href="#top">🇮🇳 <em>Make India</em> Super Power</a>
+    <div class="nav-links">
+      <a href="#politics">Politics</a>
+      <a href="#legal">Legal</a>
+      <a href="#education">Education</a>
+      <a href="#employment">Employment</a>
+      <a href="#federal">Federal</a>
+      <a href="#elections">Elections</a>
+      <a href="#secularism">Secular</a>
+      <a href="#institutions">Institutions</a>
+      <a href="#media">Media</a>
+      <a href="#submit" class="ncta">+ Add Reform</a>
+    </div>
+  </div>
+</nav>
+<div class="tc"></div>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="top">
+  <span class="hero-flag">🇮🇳</span>
+  <div class="hero-badge">People's Reform Manifesto</div>
+  <h1>India Needs <span class="a1">Massive Reform</span><br>— <span class="a2">Now</span></h1>
+  <p class="hero-sub">A bold, comprehensive, people-first agenda to transform India's politics, justice, education, economy, elections, and institutions — for all 1.4 billion citizens.</p>
+  <div class="hero-btns">
+    <a href="#politics" class="btn-p">Read the Manifesto</a>
+    <a href="#submit" class="btn-s">Add Your Reform Idea</a>
+  </div>
+  <div class="hero-stats">
+    <div class="hstat"><div class="n">9</div><div class="l">Reform Pillars</div></div>
+    <div class="hstat"><div class="n">60+</div><div class="l">Specific Demands</div></div>
+    <div class="hstat"><div class="n">1.4B</div><div class="l">Citizens We Serve</div></div>
+    <div class="hstat"><div class="n">2047</div><div class="l">Vision — Amrit Kaal</div></div>
+  </div>
+</section>
+
+<!-- ═══ OVERVIEW ═══ -->
+<section class="overview fi" id="overview">
+  <div class="ov-inner">
+    <div class="sec-head">
+      <div class="sec-eye">The People's Agenda</div>
+      <h2>9 Pillars of Reform for a New India</h2>
+      <p>Click any pillar to jump directly to that section</p>
+    </div>
+    <div class="pillars">
+      <a href="#politics" class="pcard"><div class="pnum">01</div><span class="ic">🏛️</span><h3>Politics</h3><p>Merit, term limits, zero defection</p></a>
+      <a href="#legal" class="pcard"><div class="pnum">02</div><span class="ic">⚖️</span><h3>Legal System</h3><p>Independent, fast, incorruptible</p></a>
+      <a href="#education" class="pcard"><div class="pnum">03</div><span class="ic">🎓</span><h3>Education</h3><p>Practical, truthful, free to age 14</p></a>
+      <a href="#employment" class="pcard"><div class="pnum">04</div><span class="ic">💼</span><h3>Employment</h3><p>Zero unemployment — national goal</p></a>
+      <a href="#federal" class="pcard"><div class="pnum">05</div><span class="ic">🗺️</span><h3>Federal Structure</h3><p>Real power and funds to states</p></a>
+      <a href="#elections" class="pcard"><div class="pnum">06</div><span class="ic">🗳️</span><h3>Elections</h3><p>Transparent, manipulation-free</p></a>
+      <a href="#secularism" class="pcard"><div class="pnum">07</div><span class="ic">🕊️</span><h3>Secularism</h3><p>Religion fully separated from State</p></a>
+      <a href="#institutions" class="pcard"><div class="pnum">08</div><span class="ic">🏛️</span><h3>Institutions</h3><p>People supreme — Parliament reformed</p></a>
+      <a href="#media" class="pcard"><div class="pnum">09</div><span class="ic">📺</span><h3>Media</h3><p>End Godi Media — free the press</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  REFORM 01 — POLITICS
+═══════════════════════════════════════ -->
+<section class="rsec fi" id="politics">
+<div class="ri">
+  <div class="rnum">Reform 01 / 09</div>
+  <div class="rtitle">🏛️ Political Reforms — Merit, Accountability & Zero Defection</div>
+  <div class="rsub">Politics must attract educated, honest, locally rooted leaders — not career criminals or dynasty appointees without capability or integrity</div>
+  <div class="cbox"><strong>⚠ The Crisis Today</strong>India's Parliament and assemblies are filled with unqualified, corrupt, and criminal individuals. Horse trading, party switching for money, and lifetime political careers have made elected office a tool for personal enrichment — not public service.</div>
+  <div class="dm"><h4><span class="tg tb">Qualification</span> Minimum degree mandatory — hereditary politics acceptable only when the candidate is educated, capable and honest</h4><p>Every candidate must hold at minimum a Bachelor's degree in any discipline. Hereditary politics is acceptable only when the candidate is genuinely educated, capable, honest, and non-corrupt. A qualified, honest representative — regardless of family — is welcome. An unqualified or corrupt one is not — regardless of dynasty or popularity.</p></div>
+  <div class="dm"><h4><span class="tg tr">Criminal Bar</span> No convict shall ever contest or hold any public office — permanently and irrevocably barred</h4><p>Any person convicted of any offence by a court of law must be permanently barred from contesting elections or holding public office. Even a pending charge sheet must trigger immediate suspension from all party positions until full acquittal by a court of law.</p></div>
+  <div class="dm"><h4><span class="tg tg2">Constituency Rule</span> Candidate must genuinely belong to their constituency — 5-year verified residency mandatory</h4><p>A candidate must be a bonafide resident of the constituency for a minimum of 5 years before filing nomination. Parachute candidates imposed from outside must be constitutionally prohibited. Elected representatives must live among the people they serve — not govern them from distant cities.</p></div>
+  <div class="dm"><h4><span class="tg tr">Anti-Defection</span> Party switching means permanent lifetime disqualification from all elections — no exceptions, no loopholes</h4><p>Any elected representative who switches from one party to another — for any reason — must be immediately and permanently disqualified from contesting any election for life. The present anti-defection law with its merger loopholes must be scrapped entirely. Zero tolerance. No exceptions whatsoever.</p></div>
+  <div class="dm"><h4><span class="tg tr">Horse Trading</span> Life imprisonment without parole for anyone who bribes a legislator to switch loyalty</h4><p>Any person — including party leaders, industrialists, or middlemen — found bribing an elected representative to switch allegiance must receive life imprisonment without parole. The legislator who accepts such a bribe must also receive life imprisonment and permanent disqualification from public life forever. Horse trading is treason against democracy.</p></div>
+  <div class="dm"><h4><span class="tg tr">Vote Buying</span> Life imprisonment for distributing cash, liquor or any gift to voters in exchange for votes</h4><p>Any candidate or party found distributing cash, liquor, goods, or any benefit to voters in exchange for votes must face life imprisonment. Party funds used for vote buying must result in the party being permanently deregistered from the Election Commission of India with no possibility of re-registration.</p></div>
+  <div class="dm"><h4><span class="tg ta">Accountability</span> Non-performing representatives permanently barred from contesting any election again</h4><p>Every MLA and MP must be assessed against a mandatory published performance scorecard — attendance record, bills introduced, constituency development work, and public audit outcomes. Any representative scoring below the defined minimum threshold must be barred from contesting the next election from any constituency across India.</p></div>
+  <div class="dm"><h4><span class="tg tg2">Term Limits</span> Maximum 2 terms total — then step aside permanently for fresh leadership to emerge</h4><p>No person shall hold the office of MLA or MP for more than 2 terms in total — consecutive or non-consecutive. This applies equally to Prime Ministers and Chief Ministers. Political monopolies must be broken by constitutional law. Every generation of Indians deserves new, fresh leadership with new energy and ideas.</p></div>
+  <div class="ep">
+    <div class="ep-hd"><span>✏️</span><h4>Add your own Political Reform idea to this platform</h4></div>
+    <textarea id="politics-in" placeholder="Describe your reform idea for India's political system…"></textarea>
+    <div class="ep-btns">
+      <button class="bsave" onclick="saveIdea('politics')">Save Idea</button>
+      <button class="bclr" onclick="clearIdea('politics')">Clear</button>
+      <span class="sbadge" id="politics-badge">✓ Saved to this platform!</span>
+    </div>
+    <div id="politics-saved"></div>
+  </div>
+  <div class="shr-row"><span>Share:</span><button class="shrbtn" onclick="copyLink('politics')">🔗 Copy Link</button><button class="shrbtn" onclick="window.print()">🖨 Print</button></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  REFORM 02 — LEGAL
+═══════════════════════════════════════ -->
+<section class="rsec fi" id="legal">
+<div class="ri">
+  <div class="rnum">Reform 02 / 09</div>
+  <div class="rtitle">⚖️ Legal System Reforms — Independent, Fearless & Incorruptible Justice</div>
+  <div class="rsub">The judiciary must be the guardian of citizens — not an instrument of political power, personal enrichment, or post-retirement reward</div>
+  <div class="cbox"><strong>⚠ The Crisis Today</strong>Judges of even the Supreme Court have been credibly accused of acting in favour of political parties. Judicial appointments remain opaque and political. Over 5 crore cases are pending. The common citizen waits decades for justice while the powerful walk free. Even judges of the Supreme Court are seen working as agents of political parties — denying justice to the vast majority of ordinary people.</div>
+  <div class="dm"><h4><span class="tg tr">Judicial Corruption</span> Bribe-taking judges — life imprisonment, no immunity, no pension, all assets seized</h4><p>Any judge — from magistrate to Supreme Court — found accepting a bribe for a favourable judgement must be immediately removed and sentenced to life imprisonment. No immunity. No pension. No post-retirement position. Assets disproportionate to known income must be seized and auctioned for a Judicial Welfare Fund for victims of delayed justice.</p></div>
+  <div class="dm"><h4><span class="tg tr">Political Bias</span> Any judge found favouring any political person must be immediately impeached, removed and punished with life imprisonment</h4><p>Any judge found giving favourable orders to a political party, politician, or their associates — through selective hearing, deliberate delay, or biased judgement — must be immediately impeached, removed, and prosecuted. An independent tribunal must deliver a finding within 90 days. No judge may use the protection of the collegium system to escape punishment for political compromise.</p></div>
+  <div class="dm"><h4><span class="tg tr">Government Appointments</span> The government should never have the power to appoint any judge — at any level, ever</h4><p>The executive — Central or State — must have zero role in appointing, transferring, or removing any judge at any level. All judicial appointments must be made by a fully independent National Judicial Commission of retired judges, eminent jurists, and Bar representatives — with absolutely zero political nominees or government representation of any kind.</p></div>
+  <div class="dm"><h4><span class="tg tn">Total Detachment</span> Complete separation of judiciary and executive at all levels — structural, enforceable, and permanent</h4><p>Judges must not attend government functions, receive government hospitality, or engage with political persons in any capacity — during service or for 10 full years after retirement. The separation must be structural, legally enforceable, and monitored by an independent watchdog — not merely aspirational or written only on paper and ignored in practice.</p></div>
+  <div class="dm"><h4><span class="tg ta">Time-Bound Justice</span> Every case must conclude within 2 years at every level of court — constitutionally mandated</h4><p>A constitutional mandate must be created — no case at any court level shall remain pending beyond 2 years. Judges must be held personally accountable for their pendency rate. The current vacancy of over 5,000 judicial positions must be filled within 1 year through a transparent, merit-based, apolitical process that is fully public.</p></div>
+  <div class="dm"><h4><span class="tg tg2">Post-Retirement Bar</span> No government appointments for 10 years after retirement — eliminates the incentive to please the ruling party</h4><p>No retired judge shall accept any government appointment — Tribunal, Commission, Governor, Ambassador, or any paid position — for a minimum of 10 years after retirement. This single reform eliminates the perverse incentive for judges to please the ruling government in their final years on the bench in exchange for lucrative post-retirement rewards.</p></div>
+  <div class="dm"><h4><span class="tg tb">Police Reform</span> FIR registration is a fundamental right — false FIRs punished with the same sentence they sought to impose</h4><p>Every citizen has the right to have an FIR registered — no police officer may refuse. Refusal must result in immediate criminal prosecution of that officer. Any person who files a fabricated FIR — including police officers and politicians — must face the same punishment as the accused would have faced under that false FIR. Justice must cut both ways.</p></div>
+  <div class="ep">
+    <div class="ep-hd"><span>✏️</span><h4>Add your own Legal Reform idea to this platform</h4></div>
+    <textarea id="legal-in" placeholder="Describe your reform idea for India's legal and judicial system…"></textarea>
+    <div class="ep-btns">
+      <button class="bsave" onclick="saveIdea('legal')">Save Idea</button>
+      <button class="bclr" onclick="clearIdea('legal')">Clear</button>
+      <span class="sbadge" id="legal-badge">✓ Saved!</span>
+    </div>
+    <div id="legal-saved"></div>
+  </div>
+  <div class="shr-row"><span>Share:</span><button class="shrbtn" onclick="copyLink('legal')">🔗 Copy Link</button><button class="shrbtn" onclick="window.print()">🖨 Print</button></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  REFORM 03 — EDUCATION
+═══════════════════════════════════════ -->
+<section class="rsec fi" id="education">
+<div class="ri">
+  <div class="rnum">Reform 03 / 09</div>
+  <div class="rtitle">🎓 Education Reforms — Practical, Truthful & Built for Every Indian Child</div>
+  <div class="rsub">Learning from the world's best — but building a system that is genuinely Indian, secular, and fit for every child in every corner of this diverse nation</div>
+  <div class="cbox"><strong>⚠ The Crisis Today</strong>India's education system still runs on colonial-era rote learning. Children are forced into narrow streams. History textbooks are politically distorted. Sports and nutrition are afterthoughts. Education ministers are political appointees with no teaching experience. Over 26 crore children under 14 lack access to quality schooling.</div>
+  <div class="pbox">Core Principle — Education must be truthful, practical, diverse, secular, and completely free for every child up to age 14. A constitutionally mandated minimum of 6% of GDP must be allocated to education — ring-fenced, enforced, and audited annually without exception.</div>
+  <div class="dm"><h4><span class="tg tg2">Free Education</span> The State guarantees fully free schooling for every child from age 3 to 14 — without exception</h4><p>The State bears full financial responsibility — tuition, books, uniforms, mid-day meals, and transportation where needed. A ring-fenced Education Budget of minimum 6% of GDP must be constitutionally mandated. Any government falling below this threshold must face constitutional penalties. No child shall be denied education due to poverty — under any circumstances.</p></div>
+  <div class="dm"><h4><span class="tg tb">Early Choice</span> Every child free to choose their own learning path from Class 6 — sciences, arts, trades, sports, or agriculture</h4><p>From Class 6 onwards, every child must have freedom to choose their area of deep interest — sciences, arts, languages, vocational trades, sports, technology, or agriculture. No child should be forced into a single academic track. Aptitude must be identified through assessment — never just by marks — and nurtured with equal resources and equal social respect regardless of the path chosen.</p></div>
+  <div class="dm"><h4><span class="tg tr">Truth in History</span> Children must be taught truth — never politically distorted or communally filtered history</h4><p>The history curriculum must be written exclusively by independent historians of the highest integrity — never by political appointees. It must present all of India's history truthfully — ancient glory, medieval complexity, colonial oppression, and post-independence achievements and failures alike. No civilisation, religion, or community may be glorified or demonised to serve any current political narrative. An independent National History Curriculum Commission with zero government nominees must be constituted immediately.</p></div>
+  <div class="dm"><h4><span class="tg tt">Indian Model</span> Learn from China, Finland, Germany and Singapore — but build what is genuinely right for India's diversity</h4><p>India must study the world's best — China's early STEM intensity, Finland's student-centred learning with no standardised testing until age 16, Singapore's bilingual rigour, Germany's equal dignity for vocational training — and consciously adapt what works for India's diversity and secular values. Every borrowed idea must pass the test: does it work for a child in rural Vidarbha or tribal Jharkhand? No blind copying.</p></div>
+  <div class="dm"><h4><span class="tg ta">Job Market</span> Education must connect directly to real employment — curriculum reviewed every 3 years with industry</h4><p>Every university and college curriculum must be reviewed every 3 years against actual industry needs by a joint Industry-Education Council that includes startups, MSMEs, and agriculture — not just large corporations. Internships from Class 11 must be mandatory for all students. Every graduate must exit with at least one directly employable skill beyond their academic degree.</p></div>
+  <div class="dm"><h4><span class="tg tg2">Sports Policy</span> Sports fully integrated into every school — compulsory daily time — professional pathway from age 10</h4><p>Sports must be a compulsory, fully resourced part of every school's daily timetable — not an optional extra that exists only on paper. Every school must have a trained sports teacher and basic infrastructure. A national sports scholarship programme must identify talent at age 10 and support athletes with full funding through school and college. A child who excels in sport must have the same career pathway and social respect as one who excels academically.</p></div>
+  <div class="dm"><h4><span class="tg tt">Nutrition</span> Every child nourished to learn — upgraded mid-day meals plus daily breakfast — health checks every 6 months</h4><p>The mid-day meal programme must be expanded, upgraded in nutritional quality, and made universal from age 3. Breakfast must be added for all government school children. Regular health and nutrition check-ups must be mandated every 6 months for every school-going child. State governments must be held accountable for child nutrition outcomes as a primary education performance metric.</p></div>
+  <div class="dm"><h4><span class="tg tr">Education Minister</span> Must be a professor of proven integrity — PhD mandatory, minimum 15 years teaching experience, vetted by academics</h4><p>The Education Minister — at both Centre and State level — must hold a minimum PhD or equivalent and must have at least 15 years of active teaching or academic experience at a recognised institution. No person with a purely political background and no academic credentials shall hold this portfolio under any circumstances. The appointment must be vetted by an independent academic committee before taking effect.</p></div>
+  <div class="ep">
+    <div class="ep-hd"><span>✏️</span><h4>Add your own Education Reform idea to this platform</h4></div>
+    <textarea id="education-in" placeholder="Describe your reform idea for India's education system…"></textarea>
+    <div class="ep-btns">
+      <button class="bsave" onclick="saveIdea('education')">Save Idea</button>
+      <button class="bclr" onclick="clearIdea('education')">Clear</button>
+      <span class="sbadge" id="education-badge">✓ Saved!</span>
+    </div>
+    <div id="education-saved"></div>
+  </div>
+  <div class="shr-row"><span>Share:</span><button class="shrbtn" onclick="copyLink('education')">🔗 Copy Link</button><button class="shrbtn" onclick="window.print()">🖨 Print</button></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  REFORM 04 — EMPLOYMENT
+═══════════════════════════════════════ -->
+<section class="rsec fi" id="employment">
+<div class="ri">
+  <div class="rnum">Reform 04 / 09</div>
+  <div class="rtitle">💼 Employment & Youth Policy — The Goal Is Zero Unemployment</div>
+  <div class="rsub">Every young Indian who is willing to work must have access to dignified employment — through government production units, public-private partnership, or supported self-employment</div>
+  <div class="cbox"><strong>⚠ The Crisis Today</strong>India has the world's largest youth population — yet youth unemployment stands above 23%. Millions of graduates are unemployable. The government has no coherent, time-bound plan to absorb the unemployed. This is not just an economic failure — it is a social time bomb with a lit fuse.</div>
+  <div class="pbox">National Goal — Zero unemployment rate in India within 10 years. Every willing, able citizen must have access to dignified, paid employment or supported self-employment. This is not idealism — it is a deliberate policy choice that other nations have successfully made and sustained.</div>
+  <div class="dm"><h4><span class="tg tp">National Mission</span> A National Employment Guarantee Act — covering all workers — with full legal backing and a dedicated Ministry</h4><p>Parliament must pass a National Employment Guarantee Act covering all categories of workers — graduates, skilled tradespeople, and service sector workers — not just rural unskilled labour. A dedicated Ministry of Employment — separate from Labour — must be created with annual public targets and full accountability for outcomes presented to Parliament every session.</p></div>
+  <div class="dm"><h4><span class="tg tg2">Government Units</span> At least 5 state-run employment generation production or service units in every district of every state</h4><p>Every district must establish at minimum 5 government-run production or service units — food processing, textile manufacturing, electronics assembly, handicrafts, construction materials, or IT services — designed specifically to absorb local unemployed youth. Run on commercial principles — not as welfare schemes — to ensure sustainability, dignity of work, and long-term economic viability.</p></div>
+  <div class="dm"><h4><span class="tg tb">Private Sector Partnership</span> Incentivise companies that create jobs — penalise those that reduce workforce unjustly</h4><p>Companies that increase employment by more than 10% annually must receive significant tax rebates, subsidised credit, and priority in government procurement contracts. Companies that reduce workforce without demonstrated just cause must face a financial levy deposited into the National Employment Fund. Employment generation must become a central metric of corporate citizenship — not merely profit and dividends.</p></div>
+  <div class="dm"><h4><span class="tg ta">Self-Employment</span> Zero-interest startup loans up to Rs.10 lakh and free business incubators in every taluka</h4><p>Zero-interest startup loans for every willing youth entrepreneur. Free business incubators in every taluka with professional mentorship by retired industry professionals. Guaranteed government procurement from registered MSMEs. A digital marketplace for rural artisans to sell directly to national and global markets without exploitative middlemen taking the bulk of their earnings.</p></div>
+  <div class="dm"><h4><span class="tg tt">Rural Employment</span> Production clusters in every block — jobs must come to the people, not the other way around</h4><p>Employment generation must be decisively decentralised. Every block must have at least one government-supported production or service cluster. This prevents forced rural-to-urban migration, reduces pressure on over-crowded cities, and brings real development to where the majority of India's unemployed actually live. Farmers' children must have dignified economic options in or near their own villages.</p></div>
+  <div class="dm"><h4><span class="tg tn">Accountability</span> PM and every Chief Minister must present a mandatory Annual Employment Report to their legislature</h4><p>The Chief Minister of every state and the Prime Minister must present an annual Employment State of the Nation report to their respective legislature — showing unemployment data by district, age group, and gender; targets set for the year; and targets achieved or missed with full explanation. Failure to meet employment targets must be the primary criterion in citizens' electoral assessment of their government's performance.</p></div>
+  <div class="dm"><h4><span class="tg tr">Dignity of Work</span> Every job — minimum wage, PF, ESI, and workplace safety — mandatory without any exceptions</h4><p>The zero-unemployment goal is meaningless without dignity of work. Every employment created under this policy — government, PPP, or private — must include a legally enforced minimum wage linked to cost of living, access to Provident Fund and ESI, workplace safety standards, and full protection from arbitrary dismissal. Exploitative employment is merely a new and modern form of bonded labour and must be treated as such by law.</p></div>
+  <div class="ep">
+    <div class="ep-hd"><span>✏️</span><h4>Add your own Employment Reform idea to this platform</h4></div>
+    <textarea id="employment-in" placeholder="Describe your reform idea for employment and youth policy in India…"></textarea>
+    <div class="ep-btns">
+      <button class="bsave" onclick="saveIdea('employment')">Save Idea</button>
+      <button class="bclr" onclick="clearIdea('employment')">Clear</button>
+      <span class="sbadge" id="employment-badge">✓ Saved!</span>
+    </div>
+    <div id="employment-saved"></div>
+  </div>
+  <div class="shr-row"><span>Share:</span><button class="shrbtn" onclick="copyLink('employment')">🔗 Copy Link</button><button class="shrbtn" onclick="window.print()">🖨 Print</button></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  REFORM 05 — FEDERAL
+═══════════════════════════════════════ -->
+<section class="rsec fi" id="federal">
+<div class="ri">
+  <div class="rnum">Reform 05 / 09</div>
+  <div class="rtitle">🗺️ Federal Structure — Real Power & Real Funds to the States</div>
+  <div class="rsub">India's federal structure is being centralised by stealth. States must have genuine autonomy, adequate funds, and truly independent governors to serve their own people.</div>
+  <div class="cbox"><strong>⚠ The Crisis Today</strong>States are denied their rightful share of taxes. Governor's offices are misused as political tools against opposition-ruled states. Local governments are starved of funds and real power. The Centre uses financial strangulation and Article 356 as political weapons. This is not federalism — it is disguised unitary rule wearing federal clothing.</div>
+  <div class="dm"><h4><span class="tg tg2">Fiscal Devolution</span> States must receive at least 50% of all central taxes — they know their people's needs best</h4><p>States' share in central taxes must be increased from 41% to at least 50%. All Centrally Sponsored Schemes must be converted into untied block grants — states must decide how to spend funds in their own constitutional domains without Central interference or conditions designed to justify the Centre's political agenda and take credit for state-level work.</p></div>
+  <div class="dm"><h4><span class="tg tr">Governor Reform</span> Governors must be truly independent — appointed by the Supreme Court, never the Central government</h4><p>Every Governor must be an eminent, politically unaffiliated personality — a distinguished academic, scientist, retired civil servant, or jurist — who has never been a member of any political party at any point in their life. Appointment must be made by the Supreme Court's collegium — not the Central government. A Governor acting on behalf of any political party must be immediately removed and prosecuted for breach of constitutional oath.</p></div>
+  <div class="dm"><h4><span class="tg tr">Governor's Powers</span> Strictly ceremonial — zero power to destabilise any democratically elected state government</h4><p>The Governor's power to dismiss elected state governments, delay bills indefinitely, or refuse to swear in a majority-proven Chief Minister must be completely removed from the Constitution. A Governor who withholds assent to a state bill without clear constitutional justification within 30 days must be deemed to have given assent automatically by operation of law. The era of Governors as political agents must end permanently and constitutionally.</p></div>
+  <div class="dm"><h4><span class="tg tb">Local Governance</span> Real power and real funds to gram panchayats and urban local bodies — grassroots democracy must be real</h4><p>Gram panchayats and urban local bodies must receive a constitutionally mandated share of taxes with strong enforcement mechanisms. Panchayat elections must be held strictly on time — delays by state governments must attract constitutional penalties. Local bodies must control their own budgets without state government interference or political patronage. India's democracy must be felt at the village level.</p></div>
+  <div class="dm"><h4><span class="tg ta">Article 356</span> President's Rule must require Supreme Court approval — political misuse is a criminal offence</h4><p>The imposition of President's Rule must require approval of a constitutional bench of the Supreme Court within 15 days of proclamation. Any imposition found to be politically motivated must result in criminal prosecution of the Central government ministers who recommended it for abuse of constitutional power. No more toppling democratically elected governments through a politically compliant Governor.</p></div>
+  <div class="dm"><h4><span class="tg tt">Language Rights</span> All 22 official languages have equal constitutional status — no state shall be forced to adopt Hindi</h4><p>No state shall ever be forced to adopt Hindi as an official language. All 22 Scheduled Languages of India must have equal status in governance, courts, and education within their respective regions. A multilingual India is a civilisational strength and a source of cultural richness — not a problem to be solved by linguistic imposition from above by any Central government.</p></div>
+  <div class="dm"><h4><span class="tg tn">Inter-State Council</span> Independent, with binding powers to resolve all centre-state and inter-state disputes within time limits</h4><p>An independent Inter-State Council with binding adjudicatory powers must be created by constitutional amendment. River water disputes, border disputes, and resource allocation conflicts between states must be resolved within defined timelines. Representation from all states — regardless of which political party rules them — must be guaranteed by law and enforced without exception.</p></div>
+  <div class="ep">
+    <div class="ep-hd"><span>✏️</span><h4>Add your own Federal Structure Reform idea to this platform</h4></div>
+    <textarea id="federal-in" placeholder="Describe your reform idea for India's federal structure and states' rights…"></textarea>
+    <div class="ep-btns">
+      <button class="bsave" onclick="saveIdea('federal')">Save Idea</button>
+      <button class="bclr" onclick="clearIdea('federal')">Clear</button>
+      <span class="sbadge" id="federal-badge">✓ Saved!</span>
+    </div>
+    <div id="federal-saved"></div>
+  </div>
+  <div class="shr-row"><span>Share:</span><button class="shrbtn" onclick="copyLink('federal')">🔗 Copy Link</button><button class="shrbtn" onclick="window.print()">🖨 Print</button></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  REFORM 06 — ELECTIONS
+═══════════════════════════════════════ -->
+<section class="rsec fi" id="elections">
+<div class="ri">
+  <div class="rnum">Reform 06 / 09</div>
+  <div class="rtitle">🗳️ Election Process Reforms — Transparent, Free & Completely Manipulation-Free</div>
+  <div class="rsub">The foundation of democracy is the integrity of its elections. India's election system needs urgent, fundamental, structural overhaul — not cosmetic adjustments</div>
+  <div class="cbox"><strong>⚠ The Crisis Today</strong>Voter list additions and deletions appear to be manipulated — possibly managed from outside India. Electoral bonds enabled anonymous corporate funding in what amounted to legalised extortion. EVMs lack a fully verifiable paper trail. The Election Commission has been perceived as partisan. The integrity of India's elections — the very foundation of democracy — is under serious, documented threat that demands immediate action.</div>
+  <div class="dm"><h4><span class="tg tr">EVM Reform</span> Full paper ballot backup — 100% verifiable, auditable paper trail must be the only legal record of every election</h4><p>Every EVM vote must produce a paper record that the voter can personally verify before it is deposited in a sealed box. The paper record — not the electronic count — must be the sole legal record of the election. A minimum 50% random audit of paper records against electronic counts must be mandatory for every election before any result is declared valid and accepted.</p></div>
+  <div class="dm"><h4><span class="tg tr">Voter Lists</span> Fully transparent and auditable — no voter deletion without verified registered notice at least 60 days prior</h4><p>Voter list management must be a fully transparent, publicly auditable process open to all political parties and independent observers at every stage. No voter may be deleted from the rolls without a verified, registered notice to their address at least 60 days in advance with a formal response period. Any evidence of voter list manipulation from outside India must be treated as a direct attack on national sovereignty and prosecuted accordingly.</p></div>
+  <div class="dm"><h4><span class="tg tr">Political Funding</span> Complete ban on all anonymous funding — every donation above Rs.2,000 publicly disclosed within 48 hours</h4><p>The electoral bond scheme — struck down as unconstitutional by the Supreme Court — must never be revived in any form. Every donation to any political party above Rs.2,000 must be publicly disclosed within 48 hours with full donor identity and PAN number. Corporate donations to political parties must be completely banned. Foreign funding of political parties must carry life imprisonment for all recipients — as it is an act of subverting national sovereignty.</p></div>
+  <div class="dm"><h4><span class="tg tg2">Election Commission</span> Truly independent — appointed by bipartisan Parliament committee, never by the ruling government alone</h4><p>Election Commissioners must be appointed by a bipartisan committee of Parliament — including the Leader of Opposition — never by the ruling government alone. Election Commissioners must have full security of tenure and can only be removed by Parliament impeachment. Their salary, staff, and budget must be drawn directly from the Consolidated Fund — requiring no government approval of any kind at any time.</p></div>
+  <div class="dm"><h4><span class="tg ta">Model Code</span> Violations mean immediate disqualification — not toothless warnings issued weeks after the electoral damage is done</h4><p>The Model Code of Conduct must have full statutory backing — it must be a law, not merely a convention. Any violation by any candidate or party must lead to immediate disqualification from that election. The EC must act within 24 hours of receiving a credible complaint. The era of the EC issuing hollow notices weeks after viral communal speeches have already polarised voters is permanently over.</p></div>
+  <div class="dm"><h4><span class="tg tr">Electoral Bonds SIT</span> Full independent SIT investigation — every bond purchased and every contract awarded must be cross-examined</h4><p>A Special Investigation Team — fully independent of the CBI and ED, both of which have been used as political tools by ruling parties — must investigate every electoral bond transaction and every government contract awarded to the same corporate entities in the same period. Those found guilty of using bonds to extort or bribe must face prosecution for corruption, money laundering, and criminal abuse of public power.</p></div>
+  <div class="dm"><h4><span class="tg tt">Expenditure Audit</span> Real and enforceable spending limits — audited by an independent body, never self-declared by candidates</h4><p>All election expenditure by candidates and parties must be audited by a CAG-equivalent independent body with no government nominees. Candidates found to have exceeded expenditure limits must be disqualified and their election declared void. Political parties must submit complete campaign accounts within 30 days of results. The current cosmetic limits with no real enforcement and no real consequences must be permanently abolished by law.</p></div>
+  <div class="ep">
+    <div class="ep-hd"><span>✏️</span><h4>Add your own Election Reform idea to this platform</h4></div>
+    <textarea id="elections-in" placeholder="Describe your reform idea for India's election process…"></textarea>
+    <div class="ep-btns">
+      <button class="bsave" onclick="saveIdea('elections')">Save Idea</button>
+      <button class="bclr" onclick="clearIdea('elections')">Clear</button>
+      <span class="sbadge" id="elections-badge">✓ Saved!</span>
+    </div>
+    <div id="elections-saved"></div>
+  </div>
+  <div class="shr-row"><span>Share:</span><button class="shrbtn" onclick="copyLink('elections')">🔗 Copy Link</button><button class="shrbtn" onclick="window.print()">🖨 Print</button></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  REFORM 07 — SECULARISM
+═══════════════════════════════════════ -->
+<section class="rsec fi" id="secularism">
+<div class="ri">
+  <div class="rnum">Reform 07 / 09</div>
+  <div class="rtitle">🕊️ Secularism — Separate Religion from Governance, Completely & Permanently</div>
+  <div class="rsub">Religion is being used as political opium to prevent citizens from questioning the government's failures. Using faith as a political tool must become a criminal offence in every sphere of public life.</div>
+  <div class="cbox"><strong>⚠ The Crisis Today</strong>A section of India's people are made to drink the opium of religion so they will never question the wrong policies of the government. Communal issues are deliberately manufactured so citizens never demand accountability on unemployment, corruption, broken courts, or failed schools. Government departments, law enforcement, the judiciary, and even the defence forces have seen dangerous and growing religious polarisation. This is the single greatest threat to India's unity, democracy, and development.</div>
+  <div class="pbox">Core Principle — Every citizen has the absolute right to practise their faith privately and freely. But the moment religion enters governance, public office, law enforcement, education, or the military — it becomes a crime against the Republic of India. India's Constitution already declares India secular. It is long past time to actually enforce it with full force of law.</div>
+  <div class="dm"><h4><span class="tg tr">Politics</span> Using religion to seek votes — criminal offence — minimum 5 years imprisonment plus permanent disqualification</h4><p>Any politician, party leader, or candidate who invokes religion, caste identity, or communal sentiment to seek votes — in speeches, advertisements, rallies, or social media — must be immediately disqualified, their party deregistered for that election cycle, and the individual sentenced to a minimum 5 years imprisonment. The Election Commission must have suo motu power to act within 48 hours of any credible complaint.</p></div>
+  <div class="dm"><h4><span class="tg tr">Hate Speech</span> Religious hate speech by any public figure — 7 years imprisonment plus permanent ban from all public life</h4><p>Any public figure — politician, religious leader, TV anchor, or social media influencer with over 10,000 followers — who makes statements designed to inflame religious hatred must face immediate arrest, a minimum 7-year sentence, and a permanent ban from all public life. Platforms that amplify such content must face crippling financial penalties and mandatory licence review proceedings.</p></div>
+  <div class="dm"><h4><span class="tg ta">Government Offices</span> Religion has absolutely no place in any public institution of the Indian State — zero tolerance</h4><p>No government office, court, police station, military installation, school, or public institution may display religious symbols, conduct religious ceremonies in official capacity, or permit any employee to use their position to promote or favour any religious identity. Any employee found violating this must face immediate termination and criminal prosecution — regardless of which religion is involved or which political party is in power.</p></div>
+  <div class="dm"><h4><span class="tg tb">Law Enforcement</span> Police and judiciary must be completely religion-blind in every single decision they make — always</h4><p>Any police officer, magistrate, or judge found taking action — or refusing to take action — on the basis of the religious identity of the complainant or accused must be immediately dismissed and prosecuted. Communal bias in law enforcement is a fundamental betrayal of the Constitution and must carry the same punishment as the offence being mishandled. Special civilian monitoring cells must audit law enforcement in communally sensitive areas.</p></div>
+  <div class="dm"><h4><span class="tg tg2">Defence Forces</span> The military serves the Indian nation and its Constitution — not any religion, sect, or religious community</h4><p>No regiment may be officially identified by religion in any capacity. Religious activities within military premises must be strictly personal and voluntary — never organised, funded, or encouraged by commanding officers. Any officer found promoting religious ideology within the ranks must face court martial, dismissal, and criminal prosecution under the Army Act. The military's oath is to the Constitution alone.</p></div>
+  <div class="dm"><h4><span class="tg tt">Education</span> Government schools teach the unity of India — all faiths taught equally as history, culture and philosophy</h4><p>No government school may conduct religious prayers, ceremonies, or doctrinal instruction during school hours. The curriculum must teach the philosophy and cultural heritage of all of India's religions equally and objectively — as history and social studies, never as religious doctrine to be believed. Any teacher found promoting one religion over another must face immediate suspension and prosecution without any exception.</p></div>
+  <div class="dm"><h4><span class="tg tp">Employment</span> Hiring and promotion must be merit-only — religious identity must be completely invisible in every decision</h4><p>In all government departments, public sector undertakings, and private companies receiving government contracts or subsidies, all employment decisions must be based solely on merit and performance. Any evidence of religious discrimination in employment — favouring or disfavouring any community — must attract criminal liability for the individual decision-maker personally, not merely departmental action.</p></div>
+  <div class="dm"><h4><span class="tg tn">Uniform Civil Code</span> One law for all citizens regardless of religion — individual rights and gender equality above all community dictates</h4><p>A truly secular India cannot have separate personal laws based on religion. A Uniform Civil Code applicable equally to all citizens of all faiths in matters of marriage, divorce, inheritance, and adoption must be enacted. Drafted exclusively by legal experts with zero religious body representation, it must protect individual rights and guarantee complete gender equality above any community or religious dictate of any faith.</p></div>
+  <div class="ep">
+    <div class="ep-hd"><span>✏️</span><h4>Add your own Secularism Reform idea to this platform</h4></div>
+    <textarea id="secularism-in" placeholder="Describe your reform idea for secularism in Indian governance…"></textarea>
+    <div class="ep-btns">
+      <button class="bsave" onclick="saveIdea('secularism')">Save Idea</button>
+      <button class="bclr" onclick="clearIdea('secularism')">Clear</button>
+      <span class="sbadge" id="secularism-badge">✓ Saved!</span>
+    </div>
+    <div id="secularism-saved"></div>
+  </div>
+  <div class="shr-row"><span>Share:</span><button class="shrbtn" onclick="copyLink('secularism')">🔗 Copy Link</button><button class="shrbtn" onclick="window.print()">🖨 Print</button></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  REFORM 08 — INSTITUTIONS
+═══════════════════════════════════════ -->
+<section class="rsec fi" id="institutions">
+<div class="ri">
+  <div class="rnum">Reform 08 / 09</div>
+  <div class="rtitle">🏛️ Institutional Reforms — The People Are Supreme Above All</div>
+  <div class="rsub">No PM, President, Supreme Court, or Parliament is supreme. The people of India are supreme. Every institution exists only to serve them — not rule over them.</div>
+  <div class="cbox"><strong>⚠ The Crisis Today</strong>India's constitutional institutions have been systematically captured by political parties. The Speaker acts as the ruling party's floor manager. Governors are political appointees rewarded for loyalty. Bills are passed in minutes without debate. Over 140 opposition MPs were suspended in a single session. Microphones were cut during speeches. Transformative bills were passed overnight without committee review. The disruption in Parliament happens primarily because the opposition is denied its legitimate right to express concerns and point out government failures. An opposition that is genuinely heard does not need to disrupt. Fix the cause — not the symptom.</div>
+  <div class="pbox">The People Are Supreme — The Constitution draws its power from the people. Every institution — Parliament, Supreme Court, President, Prime Minister — is a servant of the people, not their master. Government must never have hegemony in Parliament. A democracy without a strong, protected, empowered opposition is merely a majority dictatorship with elections.</div>
+  <div class="dm"><h4><span class="tg tr">Speaker / Chairman</span> Must never be from any political party — resign from party immediately on election to the chair</h4><p>The Speaker of the Lok Sabha and Chairman of the Rajya Sabha must resign from their party when elected to the chair. They must be selected by a two-thirds majority of the House from eminent personalities outside politics — constitutional jurists, retired judges, or distinguished public servants with no current political affiliation. These positions must be held by persons of the highest integrity with no political or ideological affiliations other than full adherence to the Constitution of India.</p></div>
+  <div class="dm"><h4><span class="tg tr">Speaker Accountability</span> A partisan Speaker must face impeachment, punishment and lifetime ban from all public office</h4><p>A Speaker who acts in a partisan manner must face immediate impeachment triggered by one-third of MPs, decided by three retired Chief Justices within 30 days. The Speaker must be impeached if they: switch off any MP's microphone during a speech; suspend opposition MPs en masse without independent review; pass bills without Standing Committee referral; curtail Question Hour without unanimous consent; or deny opposition its constitutionally guaranteed 40% floor time in any session. A convicted partisan Speaker is removed, banned from public office for life, and criminally prosecuted.</p></div>
+  <div class="dm"><h4><span class="tg tg2">Opposition Rights</span> 40% floor time constitutionally guaranteed — the opposition is democracy's immune system, not its enemy</div><p>A constitutional minimum of 40% of all parliamentary time must be allocated to opposition parties — proportional to their seat share. This time cannot be curtailed or overridden by anyone. Opposition must chair at least 50% of all Parliamentary Standing Committees by right of their constitutional role. Every bill must be referred to a Standing Committee for a minimum of 30 days with public hearings and expert testimony — no more midnight legislation passed in 10 minutes.</p></div>
+  <div class="dm"><h4><span class="tg ta">Disruption — the Truth</span> Penalise the cause first — not the effect. Disruption is a symptom of suppression, not recklessness</h4><p>Any inquiry into parliamentary disruption must first establish: was the opposition denied its legitimate rights before the disruption began? If yes, the Speaker and government are primarily responsible. Only when it is established that the opposition was given full, fair, and unimpeded opportunity to speak — and still chose to disrupt — should individual MPs face consequences. Even then, suspension must be reviewed by an independent parliamentary ethics committee — not decided unilaterally by the Speaker.</p></div>
+  <div class="dm"><h4><span class="tg tr">Governors</span> Must never be from any political party — appointed by Supreme Court, strictly ceremonial role only</h4><p>Governors must be eminent personalities with no political affiliation — academics, scientists, distinguished civil servants, jurists. They must never have been members of any political party at any point in their life. Appointment by the Supreme Court's collegium — never by the Central government. Governor's power to dismiss elected state governments must be completely removed from the Constitution. A Governor found acting as a political agent of the Centre must be prosecuted for criminal breach of constitutional oath.</p></div>
+  <div class="dm"><h4><span class="tg tb">People's Rights</span> Right to Recall, binding NOTA, and Citizens' Legislative Initiative — three new constitutional rights for the people</h4><p>Right to Recall — 60% of a constituency's verified voters can remove any non-performing representative mid-term through a verified petition process. Binding NOTA — if NOTA wins any constituency, a fresh election with all completely new candidates must be held within 90 days. Citizens' Legislative Initiative — if 50 lakh verified citizens sign a petition for a specific law, Parliament must debate and vote on it within 6 months. The people are supreme — not the government, not the PM, not the President, not the Supreme Court.</p></div>
+  <div class="dm"><h4><span class="tg tt">Constitutional Bodies</span> CAG, EC, CBI, NHRC — appointed by bipartisan Parliament, never by the ruling government of the day</h4><p>Every constitutional and statutory watchdog must be appointed by a bipartisan committee of Parliament with zero government nominees. Their budgets must be drawn directly from the Consolidated Fund without government approval. Heads must serve fixed, non-renewable terms and must never be eligible for any government appointment, party membership, or electoral candidacy for life after their tenure ends. Independence must be structural — not merely promised.</p></div>
+  <div class="ep">
+    <div class="ep-hd"><span>✏️</span><h4>Add your own Institutional Reform idea to this platform</h4></div>
+    <textarea id="institutions-in" placeholder="Describe your reform idea for Parliament, institutions, or the rights of India's people…"></textarea>
+    <div class="ep-btns">
+      <button class="bsave" onclick="saveIdea('institutions')">Save Idea</button>
+      <button class="bclr" onclick="clearIdea('institutions')">Clear</button>
+      <span class="sbadge" id="institutions-badge">✓ Saved!</span>
+    </div>
+    <div id="institutions-saved"></div>
+  </div>
+  <div class="shr-row"><span>Share:</span><button class="shrbtn" onclick="copyLink('institutions')">🔗 Copy Link</button><button class="shrbtn" onclick="window.print()">🖨 Print</button></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  REFORM 09 — MEDIA
+═══════════════════════════════════════ -->
+<section class="rsec fi" id="media">
+<div class="ri">
+  <div class="rnum">Reform 09 / 09</div>
+  <div class="rtitle">📺 Media Reforms — End Godi Media & Free the Indian Press</div>
+  <div class="rsub">A free press is the oxygen of democracy. Captured media is its poison. India's media must be structurally liberated — not just editorially encouraged to do better</div>
+  <div class="cbox"><strong>⚠ The Crisis Today</strong>Most channels are owned by corporates who fund a political party to receive huge government contracts in return — so the channels remain completely compromised and never report the true story. They keep attacking all others while never asking questions of the ruling party. The electoral bond scheme was a scam to extort money secretly from the corporate world and use it to purchase MLAs and MPs. Citizens are deliberately misinformed, kept divided by manufactured communal outrage, and unable to hold power accountable.</div>
+  <div class="pbox">The Corrupt Nexus — Corporate house funds ruling party through electoral bonds → receives government contracts in return → corporate-owned media channel protects the government and attacks all opposition → citizens never see the truth → the government is never held accountable → the cycle repeats and deepens. This entire structural system must be dismantled completely by law.</div>
+  <div class="dm"><h4><span class="tg tr">Ownership Ban</span> Politicians, their families, and political parties must never own any media organisation — lifetime ban</h4><p>No sitting or former politician, no political party, no trust or foundation controlled by a politician or their family may own or hold any stake in any media organisation — print, television, digital, or radio. Any existing ownership of this nature must be fully divested within 2 years. Violation must result in immediate licence cancellation and criminal prosecution of the owner with no exceptions for seniority or political stature.</p></div>
+  <div class="dm"><h4><span class="tg tr">Corporate Separation</span> No company with government contracts above Rs.100 crore may own any media organisation</h4><p>Any corporate entity holding a government contract above Rs.100 crore, or having received any government subsidy, tax waiver, or regulatory concession in the past 10 years, must be completely barred from owning any media organisation. This single reform breaks the contract-for-coverage nexus that is the structural heart of the Godi Media system in India. Divestment must be completed within 18 months of enactment into law.</p></div>
+  <div class="dm"><h4><span class="tg tr">Electoral Bonds Investigation</span> Full independent SIT probe — every bond and every contract must be cross-examined for quid pro quo</h4><p>The electoral bond scheme — struck down as unconstitutional by the Supreme Court — must be fully investigated by an SIT independent of both the CBI and ED. Every bond purchased and every government contract awarded to the same corporate entity in the same period must be cross-examined for quid pro quo. Those found guilty must face prosecution for corruption, money laundering, and criminal abuse of public power to extort private entities.</p></div>
+  <div class="dm"><h4><span class="tg tg2">Editorial Independence</span> Owner interference in editorial decisions is a criminal offence — whistleblower journalists fully protected</h4><p>A Media Editorial Independence Act must guarantee that no owner, board member, or advertiser may interfere in editorial decisions — including which stories to cover, which questions to ask, or which guests to invite. Any documented interference by an owner in editorial content must be treated as a criminal offence. Journalists who blow the whistle on such interference must be given full legal protection — they cannot be dismissed, harassed, or sued by their employer for exposing the truth to the public.</p></div>
+  <div class="dm"><h4><span class="tg ta">Government Advertising</span> Distributed by a CAG-audited statutory formula only — never used as political reward or punishment</h4><p>Government advertising at Central and State level is currently used as a weapon to reward friendly media and starve critical media into financial submission. A statutory formula based solely on readership, viewership, and verified reach must be created — published quarterly and audited by the CAG. Any government official found directing advertising to specific outlets for political reasons must face prosecution for corrupt practice under the Prevention of Corruption Act.</p></div>
+  <div class="dm"><h4><span class="tg tb">Propaganda Journalists</span> Individuals who knowingly broadcast falsehoods face personal criminal prosecution — not just channel-level fines</h4><p>Any journalist or anchor who knowingly broadcasts false information, manufactures evidence, defames individuals without factual basis, or deliberately inflames communal hatred must face individual criminal prosecution — not just a channel fine that the anchor never feels personally. Press credentials must be revoked for 5 years on first conviction and permanently on second. The defence of "I was following editorial direction" does not protect a journalist who personally presents known falsehoods to millions of citizens.</p></div>
+  <div class="dm"><h4><span class="tg tt">Independent Press Council</span> Fully statutory, zero government nominees, real power to act swiftly — with citizen complaint rights</h4><p>A new Independent Press and Media Council — composed of retired judges, senior journalists of established integrity, and civil society representatives with zero government nominees — must have statutory power to fine, suspend, and revoke media licences. Any citizen can file a complaint — acknowledged within 7 days, decided within 60 days. Annual public audit of every media organisation's complete ownership structure, all funding sources, and full government contract exposure must be published for public scrutiny. TRP measurement must be taken over by an independent statutory body — the current private system is routinely manipulated by those with money and political connections.</p></div>
+  <div class="ep">
+    <div class="ep-hd"><span>✏️</span><h4>Add your own Media Reform idea to this platform</h4></div>
+    <textarea id="media-in" placeholder="Describe your reform idea for media independence and a free press in India…"></textarea>
+    <div class="ep-btns">
+      <button class="bsave" onclick="saveIdea('media')">Save Idea</button>
+      <button class="bclr" onclick="clearIdea('media')">Clear</button>
+      <span class="sbadge" id="media-badge">✓ Saved!</span>
+    </div>
+    <div id="media-saved"></div>
+  </div>
+  <div class="shr-row"><span>Share:</span><button class="shrbtn" onclick="copyLink('media')">🔗 Copy Link</button><button class="shrbtn" onclick="window.print()">🖨 Print</button></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  SUBMIT NEW REFORM
+═══════════════════════════════════════ -->
+<section class="sub-sec" id="submit">
+<div class="sub-inner">
+  <h2>Add a New Reform to This Platform</h2>
+  <p>This platform belongs to all citizens of India. Every voice matters and every idea can change the country. Submit yours — it will be saved here permanently.</p>
+  <div class="sub-form">
+    <div class="frow">
+      <div class="fg"><label>Your Name</label><input type="text" id="sn" placeholder="Full name"></div>
+      <div class="fg"><label>Your State</label>
+        <select id="ss">
+          <option value="">Select state</option>
+          <option>Andhra Pradesh</option><option>Assam</option><option>Bihar</option>
+          <option>Chhattisgarh</option><option>Delhi</option><option>Goa</option>
+          <option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option>
+          <option>Jharkhand</option><option>Karnataka</option><option>Kerala</option>
+          <option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option>
+          <option>Odisha</option><option>Punjab</option><option>Rajasthan</option>
+          <option>Tamil Nadu</option><option>Telangana</option><option>Uttar Pradesh</option>
+          <option>Uttarakhand</option><option>West Bengal</option><option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="fg"><label>Reform Area</label>
+      <select id="sa">
+        <option value="">Select reform area</option>
+        <option>Politics</option><option>Legal System</option><option>Education</option>
+        <option>Employment</option><option>Federal Structure</option><option>Elections</option>
+        <option>Secularism</option><option>Institutions / Parliament</option><option>Media</option>
+        <option>New Area — Not Listed Above</option>
+      </select>
+    </div>
+    <div class="fg"><label>Your Reform Idea — Be as specific and bold as you like</label>
+      <textarea id="si" placeholder="Describe the change you want to see in India…"></textarea>
+    </div>
+    <button class="bsub" onclick="submitIdea()">Submit Your Reform Idea 🇮🇳 Jai Hind</button>
+  </div>
+  <div id="sub-list"></div>
+</div>
+</section>
+
+<!-- ═══════════════════════════════════════
+  FOOTER
+═══════════════════════════════════════ -->
+<footer>
+  <div class="ft-inner">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="ftl">🇮🇳 <em>Make India</em> Super Power</div>
+        <p>A people's manifesto for a truly democratic, just, and developed India. Built on the belief that 1.4 billion citizens deserve honest leadership, independent institutions, a free press, and equal justice under a truly secular constitutional republic.</p>
+      </div>
+      <div class="ft-col">
+        <h4>Reform Pillars</h4>
+        <a href="#politics">01 — Politics</a>
+        <a href="#legal">02 — Legal System</a>
+        <a href="#education">03 — Education</a>
+        <a href="#employment">04 — Employment</a>
+        <a href="#federal">05 — Federal Structure</a>
+      </div>
+      <div class="ft-col">
+        <h4>More Pillars</h4>
+        <a href="#elections">06 — Elections</a>
+        <a href="#secularism">07 — Secularism</a>
+        <a href="#institutions">08 — Institutions</a>
+        <a href="#media">09 — Media</a>
+        <a href="#submit" class="hl">+ Add Your Reform Idea</a>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <div>🇮🇳 Make India Super Power — People's Reform Platform &nbsp;|&nbsp; Open to all citizens</div>
+      <div class="ft-mottos">
+        <span>जय हिन्द</span>
+        <span>Satyameva Jayate</span>
+        <span>Vande Mataram</span>
+        <span>Jai Bharat</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<!-- ═══════════════════════════════════════
+  JAVASCRIPT
+═══════════════════════════════════════ -->
+<script>
+var SECS = ['politics','legal','education','employment','federal','elections','secularism','institutions','media'];
+
+/* ── Progress bar + back to top ── */
+window.addEventListener('scroll', function(){
+  var pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  document.getElementById('prog').style.width = pct + '%';
+  var btt = document.getElementById('btt');
+  window.scrollY > 500 ? btt.classList.add('show') : btt.classList.remove('show');
+});
+
+/* ── Fade-in on scroll ── */
+var obs = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('on'); });
+}, {threshold: 0.06});
+document.querySelectorAll('.fi').forEach(function(el){ obs.observe(el); });
+
+/* ── Save a reform idea per section ── */
+function saveIdea(sec) {
+  var txt = document.getElementById(sec + '-in').value.trim();
+  if (!txt) { alert('Please type your idea before saving.'); return; }
+  var key = 'idea_' + sec;
+  var arr = JSON.parse(localStorage.getItem(key) || '[]');
+  var item = { t: txt, d: new Date().toLocaleDateString('en-IN') };
+  arr.unshift(item);
+  localStorage.setItem(key, JSON.stringify(arr));
+  renderIdea(sec, item);
+  document.getElementById(sec + '-in').value = '';
+  var badge = document.getElementById(sec + '-badge');
+  badge.style.display = 'inline';
+  setTimeout(function(){ badge.style.display = 'none'; }, 3000);
+}
+
+function renderIdea(sec, item) {
+  var c = document.getElementById(sec + '-saved');
+  var d = document.createElement('div');
+  d.className = 'saved-item';
+  d.innerHTML = '<div class="saved-meta">Your idea — ' + item.d + '</div>' + item.t;
+  c.insertBefore(d, c.firstChild);
+}
+
+function clearIdea(sec) {
+  document.getElementById(sec + '-in').value = '';
+}
+
+/* ── Submit a new reform ── */
+function submitIdea() {
+  var n = document.getElementById('sn').value.trim();
+  var st = document.getElementById('ss').value;
+  var ar = document.getElementById('sa').value;
+  var id = document.getElementById('si').value.trim();
+  if (!n || !id || !ar) {
+    alert('Please fill in your name, choose a reform area, and describe your idea.');
+    return;
+  }
+  var item = { n:n, s:st||'India', a:ar, t:id, d:new Date().toLocaleDateString('en-IN') };
+  var arr = JSON.parse(localStorage.getItem('submitted') || '[]');
+  arr.unshift(item);
+  localStorage.setItem('submitted', JSON.stringify(arr));
+  renderSubmit(item);
+  document.getElementById('sn').value = '';
+  document.getElementById('ss').value = '';
+  document.getElementById('sa').value = '';
+  document.getElementById('si').value = '';
+  alert('Jai Hind, ' + n + '! Your reform idea has been saved to this platform.');
+}
+
+function renderSubmit(item) {
+  var c = document.getElementById('sub-list');
+  var d = document.createElement('div');
+  d.className = 'sub-card';
+  d.innerHTML = '<strong>' + item.n + '</strong> from ' + item.s +
+    ' — <em>' + item.a + '</em> (' + item.d + ')<br>' +
+    '<span style="display:block;margin-top:6px;color:#c8dff0">' + item.t + '</span>';
+  c.insertBefore(d, c.firstChild);
+}
+
+/* ── Copy section link ── */
+function copyLink(sec) {
+  var url = location.href.split('#')[0] + '#' + sec;
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(url).then(function(){ alert('Link copied! Share this reform section.'); });
+  } else {
+    prompt('Copy this link to share:', url);
+  }
+}
+
+/* ── Load all saved data on page load ── */
+window.addEventListener('load', function(){
+  SECS.forEach(function(s){
+    var arr = JSON.parse(localStorage.getItem('idea_' + s) || '[]');
+    arr.forEach(function(item){ renderIdea(s, item); });
+  });
+  var sub = JSON.parse(localStorage.getItem('submitted') || '[]');
+  sub.forEach(function(item){ renderSubmit(item); });
+});
+</script>
+</body>
+</html>
