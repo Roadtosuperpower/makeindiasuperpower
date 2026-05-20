@@ -1,0 +1,19 @@
+yaml
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: images
+
+collections:
+  - name: reforms
+    label: Reform Sections
+    folder: _reforms
+    create: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Content
+        name: body
+        widget: markdown
