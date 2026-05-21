@@ -170,7 +170,8 @@ footer{background:var(--nv3);color:#3d5a70;padding:52px 24px 32px}
 #btt:hover{background:var(--sf);color:#3d1800}
 
 /* ── FADE IN ── */
-.fi{opacity:0;transform:translateY(24px);transition:opacity .55s ease,transform .55s ease}
+.fi{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
+.js-loaded .fi{opacity:0;transform:translateY(24px)}
 .fi.on{opacity:1;transform:none}
 
 /* ── RESPONSIVE ── */
@@ -188,18 +189,6 @@ footer{background:var(--nv3);color:#3d5a70;padding:52px 24px 32px}
 }
 </style>
 </head>
-  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-<script>
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", function(user) {
-      if (!user) {
-        window.netlifyIdentity.on("login", function() {
-          document.location.href = "/admin/";
-        });
-      }
-    });
-  }
-</script>
 <body>
 
 <div id="prog"></div>
@@ -641,6 +630,7 @@ window.addEventListener('scroll', function(){
 });
 
 /* ── Fade-in on scroll ── */
+document.body.classList.add('js-loaded');
 var obs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('on'); });
 }, {threshold: 0.06});
@@ -725,6 +715,6 @@ window.addEventListener('load', function(){
   var sub = JSON.parse(localStorage.getItem('submitted') || '[]');
   sub.forEach(function(item){ renderSubmit(item); });
 });
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</script>
 </body>
 </html>
